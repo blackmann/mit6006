@@ -5,7 +5,7 @@ private fun readInt() = readLn().toInt() // single int
 private fun readStrings() = readLn().split(" ") // list of strings
 private fun readInts() = readStrings().map { it.toInt() } // list of ints
 
-// Wrong answer on Test 7, will redo
+// Wrong answer on Test 14, will redo
 fun main() {
 
     val (n, h, k) = readInts()
@@ -18,9 +18,7 @@ fun main() {
         var pack = p[i]
 
         if (pack + x > h) {
-            s += x/k
-            if (x%k !=  0) s++
-            x = 0
+            s++ // this part clears out the x(cess)
         } else {
             pack += x
         }
@@ -31,8 +29,11 @@ fun main() {
             pack += p[i++]
         }
 
-        if (pack >= k) x = pack-k
-        s+=1
+        if (pack >= k) {
+            s += pack/k
+        }
+
+        x = pack%k
     }
 
     s += if (x>0) 1 else 0
