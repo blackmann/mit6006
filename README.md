@@ -6,4 +6,4 @@ This course may however lead me to other topics and so forth, so not only will M
 What I document here are based on the way I study.
 
 [Update 07/09/2020]
-Putting my mind to motion with algorithm challenges on SPOJ. I put solutions in `spoj` package
+Putting my mind to motion with algorithm challenges on Codeforces. I put solutions in `codeforces` package
