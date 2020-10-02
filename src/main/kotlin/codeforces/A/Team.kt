@@ -1,6 +1,4 @@
-package codeforces
-
-import kotlin.math.abs
+package codeforces.A
 
 private fun readLn() = readLine()!! // string line
 private fun readInt() = readLn().toInt() // single int
@@ -8,15 +6,14 @@ private fun readStrings() = readLn().split(" ") // list of strings
 private fun readInts() = readStrings().map { it.toInt() } // list of ints
 
 fun main() {
-    var y = 0
-    var x = -1
+    var t = readInt()
+    var s = 0
 
-    while (y < 5) {
-        x = readInts().indexOf(1)
-        if (x > -1) break
-
-        y++
+    while (0 < t--) {
+        if (readInts().sum() > 1) {
+            s++
+        }
     }
 
-    println(abs(2 - x) + abs(2 - y))
+    println(s)
 }

@@ -1,4 +1,4 @@
-package codeforces
+package codeforces.A
 
 private fun readLn() = readLine()!! // string line
 private fun readInt() = readLn().toInt() // single int

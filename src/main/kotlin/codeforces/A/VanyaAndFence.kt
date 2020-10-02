@@ -1,19 +1,16 @@
-package codeforces
+package codeforces.A
+
+import java.util.*
 
 private fun readLn() = readLine()!! // string line
 private fun readInt() = readLn().toInt() // single int
 private fun readStrings() = readLn().split(" ") // list of strings
 private fun readInts() = readStrings().map { it.toInt() } // list of ints
 
-fun main() {
-    var t = readInt()
-    var s = 0
-
-    while (0 < t--) {
-        if (readInts().sum() > 1) {
-            s++
-        }
-    }
-
+// AC
+fun main(args: Array<String>) = with(Scanner(System.`in`)) {
+    val (_, h) = readInts()
+    val heights = readInts()
+    val s = heights.map { if (it > h) 2 else 1 }.sum()
     println(s)
 }

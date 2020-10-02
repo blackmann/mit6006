@@ -1,4 +1,4 @@
-package codeforces
+package codeforces.A
 
 // Problem statement: http://codeforces.com/contest/112/problem/A
 
